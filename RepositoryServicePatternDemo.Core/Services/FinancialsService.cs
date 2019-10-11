@@ -1,4 +1,5 @@
-﻿using RepositoryServicePatternDemo.Core.Repositories.Interfaces;
+﻿using RepositoryServicePatternDemo.Core.Models;
+using RepositoryServicePatternDemo.Core.Repositories.Interfaces;
 using RepositoryServicePatternDemo.Core.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,19 @@ namespace RepositoryServicePatternDemo.Core.Services
             var ticketsSold = _ticketRepo.GetAllSold().Sum(x => x.Profit);
 
             return foodSold + ticketsSold;
+        }
+
+        public FinancialStats GetStats()
+        {
+            FinancialStats stats = new FinancialStats();
+            var foodSold = _foodRepo.GetAllSold();
+            var ticketsSold = _ticketRepo.GetAllSold();
+
+            //Calculate Average Stats
+            stats.AverageTicketProfit = ticketsSold.Sum(x => x.Profit) / ticketsSold.Sum(x => x.Quantity);
+            stats.AverageFoodItemProfit = foodSold.Sum(x => x.Profit) / foodSold.Sum(x => x.Quantity);
+
+            return stats;
         }
     }
 }

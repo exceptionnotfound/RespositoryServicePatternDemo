@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-left">
+    <h1 class="display-4">Hiya everybody!</h1>
+    <p>This demo project is intended to help show how to use the Repository Service Pattern.</p>
+    <p>A few things to remember about this pattern:</p>
+    <ul>
+        <li>
+            The lowest layer of the pattern is the <strong>Repositories</strong>.  These classes only ever deal with one model object.
+            Our model objects are FoodItem and Ticket, and consequently there are repositories for each.
+        </li>
+        <li>
+            The middle layer of this pattern is the <strong>Service</strong> classes.  In this implementation, the Services inherit
+            from the repositories and can implement their own methods.  The reason for this is that Services are where we put functionality
+            which deals with multiple Model objects.
+        </li>
+        <li>
+            The upper layer of this pattern are the <strong>Controllers</strong>.  These are standard MVC Controllers, with the caveat
+            that they only ever call Service objects.
+        </li>
+    </ul>
+    <p>The goal of this pattern is to maintain clear and obvious separation between the layers.</p>
+    <p>NOTE: If you will never have functionality which needs to reference multiple Model objects, you can remove the Services layer.</p>
 </div>
