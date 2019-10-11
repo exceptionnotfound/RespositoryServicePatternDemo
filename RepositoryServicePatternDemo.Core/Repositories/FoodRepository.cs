@@ -21,6 +21,14 @@ namespace RepositoryServicePatternDemo.Core.Repositories
                     UnitPrice = 1.69M,
                     Quantity = 43
                 },
+            new FoodItem()
+            {
+                ID = 3,
+                Name = "Sour Gummy Worms",
+                SalePrice = 4.89M,
+                UnitPrice = 1.13M,
+                Quantity = 319
+            },
                 new FoodItem()
                 {
                     ID = 18,

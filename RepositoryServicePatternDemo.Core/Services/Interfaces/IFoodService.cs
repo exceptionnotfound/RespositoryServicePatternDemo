@@ -5,7 +5,5 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services.Interfaces
 {
-    public interface IFoodService : IFoodRepository
-    {
-    }
+    public interface IFoodService : IFoodRepository { }
 }

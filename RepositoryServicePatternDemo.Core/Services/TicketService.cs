@@ -6,7 +6,5 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services
 {
-    public class TicketService : TicketRepository, ITicketService
-    {
-    }
+    public class TicketService : TicketRepository, ITicketService { }
 }

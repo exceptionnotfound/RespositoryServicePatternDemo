@@ -6,7 +6,5 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services
 {
-    public class FoodService : FoodRepository, IFoodService
-    {
-    }
+    public class FoodService : FoodRepository, IFoodService { }
 }

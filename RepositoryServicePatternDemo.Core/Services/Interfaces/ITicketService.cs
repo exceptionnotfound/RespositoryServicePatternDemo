@@ -5,7 +5,5 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services.Interfaces
 {
-    public interface ITicketService : ITicketRepository
-    {
-    }
+    public interface ITicketService : ITicketRepository { }
 }

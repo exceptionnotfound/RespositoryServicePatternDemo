@@ -6,39 +6,39 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Repositories
 {
-    public class TicketRepository : ITicketRepository
+public class TicketRepository : ITicketRepository
+{
+    public List<Ticket> GetAllSold()
     {
-        public List<Ticket> GetAllSold()
+        List<Ticket> tickets = new List<Ticket>()
         {
-            List<Ticket> tickets = new List<Ticket>()
+            new Ticket()
             {
-                new Ticket()
-                {
-                    ID = 1953772,
-                    MovieName = "Joker",
-                    SalePrice = 8.99M,
-                    StudioCutPercentage = 0.75M,
-                    Quantity = 419
-                },
-                new Ticket()
-                {
-                    ID = 2817721,
-                    MovieName = "Toy Story 4",
-                    SalePrice = 7.99M,
-                    StudioCutPercentage = 0.9M,
-                    Quantity = 112
-                },
-                new Ticket()
-                {
-                    ID = 2747119,
-                    MovieName = "Downton Abbey",
-                    SalePrice = 8.99M,
-                    StudioCutPercentage = 0.72M,
-                    Quantity = 214
-                }
-            };
+                ID = 1953772,
+                MovieName = "Joker",
+                SalePrice = 8.99M,
+                StudioCutPercentage = 0.75M,
+                Quantity = 419
+            },
+            new Ticket()
+            {
+                ID = 2817721,
+                MovieName = "Toy Story 4",
+                SalePrice = 7.99M,
+                StudioCutPercentage = 0.9M,
+                Quantity = 112
+            },
+            new Ticket()
+            {
+                ID = 2747119,
+                MovieName = "Downton Abbey",
+                SalePrice = 8.99M,
+                StudioCutPercentage = 0.72M,
+                Quantity = 214
+            }
+        };
 
-            return tickets;
-        }
+        return tickets;
     }
+}
 }

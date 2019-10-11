@@ -5,9 +5,9 @@ using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services.Interfaces
 {
-    public interface IFinancialsService
-    {
-        decimal GetTotalSold();
-        FinancialStats GetStats();
-    }
+public interface IFinancialsService
+{
+    decimal GetTotalSold();
+    FinancialStats GetStats();
+}
 }
