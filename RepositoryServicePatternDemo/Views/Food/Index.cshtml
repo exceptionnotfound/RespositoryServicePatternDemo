@@ -1,0 +1,30 @@
+﻿@model IEnumerable<RepositoryServicePatternDemo.Core.Models.FoodItem>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Food Items Sold</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.SalePrice)</th>
+            <th>@Html.DisplayNameFor(model => model.UnitPrice)</th>
+            <th>Profit Per Item</th>
+            <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.SalePrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.UnitPrice)</td>
+                <td>$@(item.SalePrice - item.UnitPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+            </tr>
+        }
+    </tbody>
+</table>
