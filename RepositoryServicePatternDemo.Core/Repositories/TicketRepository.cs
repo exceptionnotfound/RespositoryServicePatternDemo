@@ -30,6 +30,14 @@ public class TicketRepository : ITicketRepository
             },
             new Ticket()
             {
+                ID = 2177492,
+                MovieName = "Hustlers",
+                SalePrice = 8.49M,
+                StudioCutPercentage = 0.67M,
+                Quantity = 51
+            },
+            new Ticket()
+            {
                 ID = 2747119,
                 MovieName = "Downton Abbey",
                 SalePrice = 8.99M,
