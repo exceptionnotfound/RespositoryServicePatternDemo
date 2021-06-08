@@ -1,10 +1,7 @@
 ﻿using RepositoryServicePatternDemo.Core.Models;
 using RepositoryServicePatternDemo.Core.Repositories.Interfaces;
 using RepositoryServicePatternDemo.Core.Services.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RepositoryServicePatternDemo.Core.Services
 {
